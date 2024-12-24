@@ -1,0 +1,19 @@
+@layer components {
+  .form-input {
+    @apply w-full px-4 py-2 border border-[--gray-300] rounded-lg focus:ring-2 
+           focus:ring-[--orange-primary] focus:border-transparent outline-none transition-colors;
+  }
+
+  .form-select {
+    @apply w-full px-4 py-2 border border-[--gray-300] rounded-lg focus:ring-2 
+           focus:ring-[--orange-primary] focus:border-transparent outline-none appearance-none transition-colors;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-[--gray-600] mb-1;
+  }
+
+  .form-group {
+    @apply space-y-2;
+  }
+}

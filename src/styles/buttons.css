@@ -1,0 +1,22 @@
+@layer components {
+  .btn-base {
+    @apply px-4 py-2 rounded-lg transition-colors font-bold;
+  }
+
+  .btn-primary {
+    @apply btn-base bg-[--orange-primary] text-white hover:bg-[--orange-secondary];
+  }
+
+  .btn-secondary {
+    @apply btn-base bg-white text-[--orange-primary] border border-[--orange-primary] 
+           hover:bg-[--orange-primary] hover:text-white;
+  }
+
+  .btn-danger {
+    @apply btn-base bg-red-600 text-white hover:bg-red-700;
+  }
+
+  .btn-success {
+    @apply btn-base bg-green-600 text-white hover:bg-green-700;
+  }
+}

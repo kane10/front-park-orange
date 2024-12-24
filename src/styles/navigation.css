@@ -1,0 +1,10 @@
+@layer components {
+  .nav-link {
+    @apply flex items-center gap-2 px-4 py-2 text-[--gray-600] hover:bg-[--gray-100] 
+           rounded-lg transition-colors font-medium;
+  }
+
+  .nav-link.active {
+    @apply bg-[--orange-primary] text-white hover:bg-[--orange-secondary] font-bold;
+  }
+}

@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --orange-primary: #FF7900;
+    --orange-secondary: #F16E00;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray-50: #F8F8F8;
+    --gray-100: #EEEEEE;
+    --gray-200: #DDDDDD;
+    --gray-300: #CCCCCC;
+    --gray-400: #999999;
+    --gray-500: #666666;
+    --gray-600: #595959;
+  }
+
+  body {
+    @apply bg-[--gray-50] text-[--black] antialiased;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply bg-[--orange-primary] text-white px-4 py-2 rounded-lg hover:bg-[--orange-secondary] 
+           transition-colors font-bold;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-[--orange-primary] border border-[--orange-primary] px-4 py-2 rounded-lg 
+           hover:bg-[--orange-primary] hover:text-white transition-colors font-bold;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 
+           transition-colors font-bold;
+  }
+
+  .btn-success {
+    @apply bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 
+           transition-colors font-bold;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply flex items-center gap-2 px-4 py-2 text-[--gray-600] hover:bg-[--gray-100] 
+           rounded-lg transition-colors font-medium;
+  }
+
+  .nav-link.active {
+    @apply bg-[--orange-primary] text-white hover:bg-[--orange-secondary] font-bold;
+  }
+
+  /* Forms */
+  .form-input {
+    @apply w-full px-4 py-2 border border-[--gray-300] rounded-lg focus:ring-2 
+           focus:ring-[--orange-primary] focus:border-transparent outline-none transition-colors;
+  }
+
+  .form-select {
+    @apply w-full px-4 py-2 border border-[--gray-300] rounded-lg focus:ring-2 
+           focus:ring-[--orange-primary] focus:border-transparent outline-none appearance-none transition-colors;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-[--gray-600] mb-1;
+  }
+
+  /* Cards & Containers */
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-[--gray-300] p-6;
+  }
+
+  .card-header {
+    @apply flex items-center justify-between mb-4;
+  }
+
+  .card-title {
+    @apply text-lg font-bold text-[--gray-700];
+  }
+
+  /* Status Badges */
+  .status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold border;
+  }
+
+  /* Icons */
+  .icon-button {
+    @apply p-2 rounded-lg transition-colors;
+  }
+
+  .icon-button-primary {
+    @apply text-[--gray-600] hover:text-[--orange-primary] hover:bg-[--gray-100];
+  }
+
+  .icon-button-danger {
+    @apply text-[--gray-600] hover:text-red-600 hover:bg-red-50;
+  }
+}

@@ -1,0 +1,13 @@
+@layer components {
+  .status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold border;
+  }
+
+  .badge-primary {
+    @apply bg-[--orange-primary] text-white;
+  }
+
+  .badge-secondary {
+    @apply bg-[--gray-100] text-[--gray-600];
+  }
+}
